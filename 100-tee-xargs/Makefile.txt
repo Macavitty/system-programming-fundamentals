@@ -1,0 +1,11 @@
+CC=gcc
+CFLAGS=-std=c11 -g -Wall -Wextra 
+
+all: tee xargs
+
+tee: tee.c
+	$(CC) $(CFLAGS) -o tee tee.c
+xargs: xargs.c
+	$(CC) $(CFLAGS) -o xargs xargs.c
+clean:
+	@rm tee xargs
